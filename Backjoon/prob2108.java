@@ -1,5 +1,3 @@
-
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -13,10 +11,10 @@ public class prob2108 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		//ÀÔ·Â
+		//ì…ë ¥
 		int T = Integer.parseInt(br.readLine());
 
-		//ÃÖ´ë°ª 4000 + 4000 = 8000
+		//ìµœëŒ€ê°’ 4000 + 4000 = 8000
 		int[] arr = new int[8001];
 
 		for(int i = 0; i < T ; i++) {
@@ -24,20 +22,20 @@ public class prob2108 {
 			arr[val+4000]++;
 		}
 		
-		//ÃÖºó°ª ±¸ÇÏ±â
+		//ìµœë¹ˆê°’ êµ¬í•˜ê¸°
 		int maxNoVal = 0;
 		int minNo = 0;
 		int minNo2 = 0;
 		boolean checkMin2 = false;
 		
-		//Á¤·ÄµÈ ¹è¿­ Ãâ·Â
+		//ì •ë ¬ëœ ë°°ì—´ ì¶œë ¥
 		int[] arr2 = new int[T];
 		int count = 0;
-		int i = 0; // ±âÁ¸ ¹è¿­ ÀÎµ¦½º
-		int index = 0; // »õ ¹è¿­ÀÇ ÀÎµ¦½º
+		int i = 0; // ê¸°ì¡´ ë°°ì—´ ì¸ë±ìŠ¤
+		int index = 0; // ìƒˆ ë°°ì—´ì˜ ì¸ë±ìŠ¤
 		while(count < T) {
 			if(arr[i] != 0) {
-				//ÃÖºó°ª °³¼ö ±¸ÇÏ±â
+				//ìµœë¹ˆê°’ ê°œìˆ˜ êµ¬í•˜ê¸°
 				if(arr[i] > maxNoVal) {
 					maxNoVal = arr[i];
 					minNo2 = i-4000;
@@ -59,23 +57,23 @@ public class prob2108 {
 			i++;
 		}
 		
-		//»ê¼úÆò±Õ
+		//ì‚°ìˆ í‰ê· 
 		int sum = 0;
 		for(int k = 0; k < arr2.length; k++) 
 			sum += arr2[k];
 		
 		bw.write(Math.round((double)sum/T)+"\n"); 
 		
-		//Áß°£°ª
+		//ì¤‘ê°„ê°’
 		bw.write(arr2[T/2]+"\n");
 		
-		//ÃÖºó°ª
+		//ìµœë¹ˆê°’
 		bw.write(minNo2+"\n");
 		
-		// ÃÖ´ë°ª-ÃÖ¼Ò°ª
+		// ìµœëŒ€ê°’-ìµœì†Œê°’
 		bw.write(arr2[T-1]-arr2[0]+"");
 
-		//Ãâ·Â
+		//ì¶œë ¥
 		bw.flush();
 		bw.close();
 	}
