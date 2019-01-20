@@ -1,5 +1,3 @@
-
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,12 +10,7 @@ public class prob1924 {
 		String[] date = {"MON","TUE", "WED", "THU", "FRI", "SAT","SUN"};
 
 		int totalDays = 0;
-		/*
-		Scanner sc = new Scanner(System.in);
-		int x = sc.nextInt();
-		int y = sc.nextInt();
-		sc.close();
-		 */
+		
 		try {
 			BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
 			StringTokenizer st = new StringTokenizer( br.readLine() );
