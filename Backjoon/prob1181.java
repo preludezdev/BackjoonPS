@@ -1,5 +1,3 @@
-
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -15,7 +13,7 @@ public class prob1181 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		//�Է�
+		//ÀÔ·Â
 		int T = Integer.parseInt(br.readLine());
 
 		ArrayList<Model> al = new ArrayList<>();
@@ -75,8 +73,6 @@ class Model implements Comparable<Model>{
 			}
 			return 0;
 		}
-	}
-	
-	
+	}	
 }
 
