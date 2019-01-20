@@ -2,14 +2,13 @@ import java.io.*;
 import java.util.*;
 
 public class prob1874 {
-
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub	
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringBuffer result = new StringBuffer();
 		int T = Integer.parseInt(br.readLine());
-		int[] val = new int[T]; // ÀÔ·Â°ª
+		int[] val = new int[T]; // ì…ë ¥ê°’
 
 		for(int i = 0 ; i < T ; i++) {
 			val[i] = Integer.parseInt(br.readLine());
@@ -17,12 +16,12 @@ public class prob1874 {
 
 		ArrayList<Integer> stack = new ArrayList<>();
 
-		int count = 0; // pop È½¼ö 
-		int push = 1; // ÇöÀç Çª½ÃÇØ¾ßÇÒ ¼ıÀÚ
-		int curr = 0; // ÇöÀç ½ºÅÃÀÇ top
-		//Ã£´Â °ªÀÌ ÇöÀç ÀÎµ¦½ºº¸´Ù Å©¸é Çª½Ã
-		//Ã£´Â °ªÀÌ ÇöÀç ÀÎµ¦½ºº¸´Ù ÀÛÀ¸¸é ÆË
-		//ÀÌ¶§ Ã£´Â °ªÀÌ ÀÌ¹Ì ÆË µÇ¾úÀ¸¸é NO
+		int count = 0; // pop íšŸìˆ˜ 
+		int push = 1; // í˜„ì¬ í‘¸ì‹œí•´ì•¼í•  ìˆ«ì
+		int curr = 0; // í˜„ì¬ ìŠ¤íƒì˜ top
+		//ì°¾ëŠ” ê°’ì´ í˜„ì¬ ì¸ë±ìŠ¤ë³´ë‹¤ í¬ë©´ í‘¸ì‹œ
+		//ì°¾ëŠ” ê°’ì´ í˜„ì¬ ì¸ë±ìŠ¤ë³´ë‹¤ ì‘ìœ¼ë©´ íŒ
+		//ì´ë•Œ ì°¾ëŠ” ê°’ì´ ì´ë¯¸ íŒ ë˜ì—ˆìœ¼ë©´ NO
 		while(count < T) {
 			if(stack.size() == 0 )
 				curr = 0;
@@ -34,13 +33,13 @@ public class prob1874 {
 				push++;
 				result.append("+\n");
 			}
-			else if(curr == val[count]) { //popÀÌ ¾ÈµÆÀ¸¸é pop or NO
+			else if(curr == val[count]) { //popì´ ì•ˆëìœ¼ë©´ pop or NO
 				stack.remove(stack.size()-1);
 				result.append("-\n");
 				count++;
 			}
 			else {
-				result.setLength(0); // ½ºÆ®¸µ¹öÆÛ ÃÊ±âÈ­
+				result.setLength(0); // ìŠ¤íŠ¸ë§ë²„í¼ ì´ˆê¸°í™”
 				result.append("NO");
 				break;
 			}
