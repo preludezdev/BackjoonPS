@@ -1,5 +1,3 @@
-
-
 import java.io.*;
 
 public class prob8958 {
