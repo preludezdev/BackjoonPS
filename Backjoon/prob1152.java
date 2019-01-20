@@ -1,5 +1,3 @@
-
-
 import java.io.*;
 
 public class prob1152 {
@@ -29,5 +27,4 @@ public class prob1152 {
 			e.printStackTrace();
 		}
 	}
-
 }
