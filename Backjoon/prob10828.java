@@ -19,7 +19,6 @@ public class prob10828 {
 
 		bw.flush();
 		bw.close();
-
 	}
 
 	public static String stackController(String command) {
