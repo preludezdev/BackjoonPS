@@ -47,9 +47,7 @@ public class Main {
 					bw.write(al.get(k) +" " + (n-al.get(k)) + "\n");
 					break;
 				}
-				
 			}
-			
 		}
 		
 		bw.flush();
