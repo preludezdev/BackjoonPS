@@ -1,5 +1,3 @@
-
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -16,19 +14,19 @@ public class prob4344 {
 		StringTokenizer st;
 		
 		try {			
-			//ÀÔ·ÂÀÇ Ã¹¹øÂ° ÁÙ
+			//ì…ë ¥ì˜ ì²«ë²ˆì§¸ ì¤„
 			int count = Integer.parseInt(br.readLine());
 			double max = 0;
 			double[] arr = new double[count];
 			
-			//ÀÔ·ÂÀÇ µÎ¹øÂ° ÁÙ
+			//ì…ë ¥ì˜ ë‘ë²ˆì§¸ ì¤„
 			st = new StringTokenizer(br.readLine());
 			
 			for(int i = 0 ; i < count ; i++) {				
 				String tempString = st.nextToken();
 				arr[i] = Integer.parseInt(tempString);
 				
-				//ÃÖ°íÁ¡¼ö ±¸ÇÏ±â
+				//ìµœê³ ì ìˆ˜ êµ¬í•˜ê¸°
 				if(arr[i] > max)
 					max = arr[i];				
 			}
