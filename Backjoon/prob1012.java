@@ -20,19 +20,18 @@ public class prob1012 {
 		}
 		sc.close();
 		
-		// ½Ã½ºÅÛ ÀÚ¿ø»ç¿ëÇÏ´Â °ÍµéÀº ¹İ.µå.½Ã close ÇØ¾ß ÇÑ´Ù
-		//  Å°º¸µå, µ¥ÀÌÅÍº£ÀÌ½º, ÆÄÀÏ, ³×Æ®¿öÅ©, ....
-		// Closeable ÀÎÅÍÆäÀÌ½º ±¸ÇöÇÑ Á¸Àçµé..
+		// ì‹œìŠ¤í…œ ìì›ì‚¬ìš©í•˜ëŠ” ê²ƒë“¤ì€ ë°˜.ë“œ.ì‹œ close í•´ì•¼ í•œë‹¤
+		//  í‚¤ë³´ë“œ, ë°ì´í„°ë² ì´ìŠ¤, íŒŒì¼, ë„¤íŠ¸ì›Œí¬, ....
+		// Closeable ì¸í„°í˜ì´ìŠ¤ êµ¬í˜„í•œ ì¡´ì¬ë“¤..
 	}
 
-	static void findCount() {		
-		
+	static void findCount() {			
 //		Scanner sc = new Scanner(System.in);
-		maxX = sc.nextInt(); //¸Ê °¡·Î ±æÀÌ
-		maxY = sc.nextInt(); //¸Ê ¼¼·Î ±æÀÌ
+		maxX = sc.nextInt(); //ë§µ ê°€ë¡œ ê¸¸ì´
+		maxY = sc.nextInt(); //ë§µ ì„¸ë¡œ ê¸¸ì´
 		int num_cabbage = sc.nextInt();
 
-		//ÃÊ±âÈ­
+		//ì´ˆê¸°í™”
 		index = 1;		
 		map = new int[maxY][maxX];
 			
@@ -42,7 +41,7 @@ public class prob1012 {
 			}
 		}
 		
-		// ¹èÃß À§Ä¡ »ı¼º
+		// ë°°ì¶” ìœ„ì¹˜ ìƒì„±
 		int newX;
 		int newY;
 		for(int k = 0; k < num_cabbage ; k++) {
@@ -51,9 +50,9 @@ public class prob1012 {
 			map[newY][newX]	= 1;			
 		}
 
-		// ¸Ê µ¹¸é¼­ ÃÖ¼Ò ¹ú·¹ ¼ö Ã¼Å©	
-		for(int i = 0; i < maxY ; i++) { //¼¼·Î
-			for(int j = 0; j < maxX ; j++) { //°¡·Î
+		// ë§µ ëŒë©´ì„œ ìµœì†Œ ë²Œë ˆ ìˆ˜ ì²´í¬	
+		for(int i = 0; i < maxY ; i++) { //ì„¸ë¡œ
+			for(int j = 0; j < maxX ; j++) { //ê°€ë¡œ
 				if(map[i][j] == 1) {
 					index++;					
 					path(i,j);
@@ -65,18 +64,18 @@ public class prob1012 {
 		
 	}
 
-	//x,y À§Ä¡¿¡´Â ¹èÃß°¡ ÀÖ´ÂÁö Ã¼Å©ÇÏ°í ÀÖÀ¸¸é  ³×¹æÇâÀ¸·Î º¸³½´Ù
+	//x,y ìœ„ì¹˜ì—ëŠ” ë°°ì¶”ê°€ ìˆëŠ”ì§€ ì²´í¬í•˜ê³  ìˆìœ¼ë©´  ë„¤ë°©í–¥ìœ¼ë¡œ ë³´ë‚¸ë‹¤
 	static void path(int x, int y) {
 		if(map[x][y] == 1) {
 			map[x][y] = index;
 			if(x-1 >= 0)
-				path(x-1,y);//À§
+				path(x-1,y);//ìœ„
 			if(x+1 < maxY)
-				path(x+1,y);//¾Æ·¡
+				path(x+1,y);//ì•„ë˜
 			if(y-1 >= 0)
-				path(x,y-1);//¿Ş
+				path(x,y-1);//ì™¼
 			if(y+1 < maxX)
-				path(x,y+1);//¿À
+				path(x,y+1);//ì˜¤
 		}
 	}	
 }
