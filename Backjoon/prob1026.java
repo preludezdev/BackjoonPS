@@ -1,5 +1,3 @@
-
-
 import java.util.Scanner;
 
 public class prob1026 {
@@ -18,8 +16,8 @@ public class prob1026 {
 		for(int i = 0; i < count ; i++)
 			B[i] = sc.nextInt();
 
-		//¾Ë°í¸®Áò
-		//¹öºí¼ÒÆ®
+		//ì•Œê³ ë¦¬ì¦˜
+		//ë²„ë¸”ì†ŒíŠ¸
 		for(int j = 0; j < count; j++) {
 			for(int i = count-1; i > 0 ; i--) {
 				if(B[i] < B[i-1]) {
