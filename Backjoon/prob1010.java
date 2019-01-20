@@ -21,7 +21,7 @@ public class prob1010 {
 			N = sc.nextInt();
 			M = sc.nextInt();
 			
-			//dP »ı¼º
+			//dP ìƒì„±
 			//dP[N][M]
 			for(int i = 0; i<=M;i++) {
 				dP[1][i] = i; 
