@@ -1,5 +1,3 @@
-
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -52,11 +50,11 @@ public class prob4673 {
 		if(nextVal > 10000)
 			return;
 		
-		if(arr[i-1] != 0) { // ¼¿ÇÁ³Ñ¹ö°¡ ¾Æ´Ï¸é 0À¸·Î ¸¸µé¸é¼­ ÁøÇàÇÑ´Ù. ³ªÁß¿¡ ¹Ýº¹¹® ´Ù µ¹°í³ª¸é  °ªÀÌ 0ÀÌ ¾Æ´Ñ°Ô ¼¿ÇÁ³Ñ¹ö°¡ µÈ´Ù.
+		if(arr[i-1] != 0) { // ì…€í”„ë„˜ë²„ê°€ ì•„ë‹ˆë©´ 0ìœ¼ë¡œ ë§Œë“¤ë©´ì„œ ì§„í–‰í•œë‹¤. ë‚˜ì¤‘ì— ë°˜ë³µë¬¸ ë‹¤ ëŒê³ ë‚˜ë©´  ê°’ì´ 0ì´ ì•„ë‹Œê²Œ ì…€í”„ë„˜ë²„ê°€ ëœë‹¤.
 			recFunction(nextVal);
 			arr[nextVal-1] = 0;
 		}
-		//0ÀÌ¸é ´õÀÌ»ó ÁøÇà ±ÝÁö(ÀÌ¹Ì Àü¿¡ ´Ù ¹âÀº ±æÀÓ)
+		//0ì´ë©´ ë”ì´ìƒ ì§„í–‰ ê¸ˆì§€(ì´ë¯¸ ì „ì— ë‹¤ ë°Ÿì€ ê¸¸ìž„)
 	}
 	
 	static int mathFunction(int n) {
