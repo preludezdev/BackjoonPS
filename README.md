@@ -10,6 +10,10 @@
 
 <hr/>
 
+![1](https://user-images.githubusercontent.com/41214420/51436619-de041f00-1cd3-11e9-9187-34b4d34c0a5c.JPG)
+
+<hr/>
+
 백준 ID : preludez
 
 https://www.acmicpc.net/
