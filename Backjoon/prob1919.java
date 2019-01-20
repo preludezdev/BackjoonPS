@@ -1,5 +1,3 @@
-
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -23,13 +21,13 @@ public class prob1919 {
 			int[] arr01 = new int[26];
 			int[] arr02 = new int[26];
 			
-			//ÃÊ±âÈ­
+			//ì´ˆê¸°í™”
 			for(int i = 0; i < 26; i++) {
 				arr01[i] = 0;
 				arr02[i] = 0;
 			}
 			
-			//¾Ë°í¸®Áò
+			//ì•Œê³ ë¦¬ì¦˜
 			for(int i = 0 ; i < inputWord01.length(); i++) {
 				arr01[inputWord01.charAt(i)-97]++;
 			}
