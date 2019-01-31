@@ -33,16 +33,15 @@ public class prob1520 {
 	public static int gotoDest(int i, int j) {
 		int sum = 0;
 		
-		//한번 목적지에서 현재위치로 돌아오는 경우의 수를 구했으면
-		//저장했다가 그대로 쓴다.
+		//한번 목적지에서 현재위치로 돌아오는 경우의 수를 구했으면 저장했다가 그대로 쓴다.
 		//여기서 타임로스를 줄일 수 있다.
 		if(dp[i][j] != -1) {
 			return dp[i][j];
 		}
 		
+		//목적지 도착
 		if(arr[i][j] == arr[arr.length - 2][arr[0].length - 2]) {
-			dp[i][j] = 1;
-			return dp[i][j];
+			return dp[i][j] = 1;
 		}
 
 		for(int direction = 0; direction < 4; direction++) { //상하좌우
@@ -53,8 +52,7 @@ public class prob1520 {
 				sum += gotoDest(nextX, nextY);
 		}
 		
-		dp[i][j] = sum;
-		return dp[i][j];
+		return dp[i][j] = sum;
 	}
 }
 
